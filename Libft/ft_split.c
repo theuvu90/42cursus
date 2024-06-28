@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:35:40 by thivu             #+#    #+#             */
-/*   Updated: 2024/06/12 13:30:36 by thivu            ###   ########.fr       */
+/*   Updated: 2024/06/28 12:50:38 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,3 +82,26 @@ char	**ft_split(char const *s, char c)
 	}
 	return (split);
 }
+/*
+#include <stdio.h>
+int main(void)
+{
+	char const str[] = "42,Madrid,es,el,campus,de,programación,más,innovador";
+	char c = ',';
+	char **result = ft_split(str, c);
+	if (result == NULL)
+	{
+		printf("Fallo en asignación de memoria.\n");
+		return (1);
+	}
+	int i = 0;
+	while (result[i] != NULL)
+	{
+		printf("%s\n", result[i]);
+		free(result[i]);
+		result[i] = NULL;
+		i++;
+	}
+	free_str(result);
+	return (0);	
+}*/

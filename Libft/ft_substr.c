@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 10:58:52 by thivu             #+#    #+#             */
-/*   Updated: 2024/06/12 16:24:50 by thivu            ###   ########.fr       */
+/*   Updated: 2024/06/28 14:59:34 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
-	size_t	i;
+	char	*substr;	
 
-	substr = malloc(sizeof(char) * (len + 1));
-	if (!substr || !s)
+	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	i = 0;
-	while (s[start + i] && i < len)
-	{
-		substr[i] = (char)s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	substr = malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, len);
+	substr [len] = '\0';
 	return (substr);
 }
