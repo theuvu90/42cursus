@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putunsignbr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 09:42:58 by thivu             #+#    #+#             */
-/*   Updated: 2024/03/25 10:05:42 by thivu            ###   ########.fr       */
+/*   Created: 2024/07/09 12:15:35 by thivu             #+#    #+#             */
+/*   Updated: 2024/07/09 15:03:17 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int ft_putunsignbr(unsigned int n)
 {
-	write (fd, &c, 1);
+    if (n > 9)
+        ft_putnbr(n / 10);
+    ft_putnbr(n % 10);
 }

@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 09:48:13 by thivu             #+#    #+#             */
-/*   Updated: 2024/06/29 11:30:26 by thivu            ###   ########.fr       */
+/*   Created: 2024/03/25 09:45:41 by thivu             #+#    #+#             */
+/*   Updated: 2024/07/09 13:08:04 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putstr(char *s)
 {
-	long	num;
+	int	i;	
 
-	num = n;
-	if (num < 0)
+	i = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
+	while (i < ft_strlen(s))
 	{
-		ft_putchar_fd('-', fd);
-		num *= -1;
+		ft_putchar(s[i]);
+		i++;
 	}
-	if (num > 9)
-		ft_putnbr_fd(num / 10, fd);
-	ft_putchar_fd(num % 10 + '0', fd);
+	return (i);
 }
-/*
-#include <stdio.h>
-int main(){
-	ft_putnbr_fd(-2147483648, 1);
-	return (0);
-}*/

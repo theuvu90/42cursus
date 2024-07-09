@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 11:26:15 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/09 14:34:02 by thivu            ###   ########.fr       */
+/*   Created: 2024/03/25 09:48:13 by thivu             #+#    #+#             */
+/*   Updated: 2024/07/09 14:45:40 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_putnbr(int n)
 {
-	size_t	len;
+	long	num;
 
-	len = 0;
-	while (*str)
+	num = n;
+	if (num < 0)
 	{
-		len++;
-		str++;
+		ft_putchar('-');
+		num *= -1;
 	}
-	return (len);
+	if (num > 9)
+		ft_putnbr(num / 10);
+	ft_putchar(num % 10 + '0');
+	return (num);
 }
