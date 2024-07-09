@@ -14,20 +14,20 @@
 
 int	ft_putnbr(int n)
 {
-	unsigned int	cont;
+	unsigned int	count;
 
-	cont = 0;
+	count = 0;
 	if (n < 0)
 	{
-		cont += ft_putchar('-');
-		cont += ft_putnbr(-n);
+		count += ft_putchar('-');
+		count += ft_putnbr(-n);
 	}
 	if (n > 9)
 	{
-		cont += ft_putnbr(n / 10);
-		cont += ft_putnbr(n % 10);
+		count += ft_putnbr(n / 10);
+		count += ft_putnbr(n % 10);
 	}
-	cont += ft_putchar(n + '0');	
+	count += ft_putchar(n + '0');	
 	
-	return (cont);
+	return (count);
 }

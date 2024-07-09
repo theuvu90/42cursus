@@ -14,7 +14,14 @@
 
 int ft_putunsignbr(unsigned int n)
 {
+    unsigned int    count;
+
+    count = 0;
     if (n > 9)
-        ft_putnbr(n / 10);
-    ft_putnbr(n % 10);
+    {
+        count += ft_putnbr(n / 10);
+        count += ft_putnbr(n % 10);
+    }
+    count += ft_putchar(n + '0');
+    return (count);
 }
