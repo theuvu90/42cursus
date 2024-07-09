@@ -18,10 +18,12 @@
 # include <stddef.h>
 # include <limits.h>
 
+int     check_format(const char *format, void *args);
 int	    ft_putchar(char c);
 int	    ft_putstr(char *s);
 int 	ft_putnbr(int n);
 int     ft_putunsignbr(unsigned int n);
 size_t	ft_strlen(const char *str);
+char	*ft_strchr(const char *s, int c);
 
 #endif
