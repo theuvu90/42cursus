@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:48:08 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 12:28:57 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 12:32:39 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putnbr_base(unsigned long nbr, char *base)
 		len++;
 	if (nbr < len)
 	{
-		if (ft_putchar(base[nbr] == -1))
+		if (ft_putchar(base[nbr]) == -1)
 			return (-1);
 		return (1);
 	}

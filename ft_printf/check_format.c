@@ -6,30 +6,31 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:04:46 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 11:42:48 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 12:43:58 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	check_format(char format, void *args)
+int	check_format(char format, va_list args)
 {
-	int	n;
-
-	n = 0;
 	if (format == 'c')
-		n += ft_putchar((char)args);
-	if (format == 's')
-		n += ft_putstr((char *)args);
-	if (format == 'p')
-		n += ft_putpoint((unsigned long)args);
-	if (format == 'd' || *format == 'i')
-		n += ft_putnbr((int)args);
-	if (format == 'u')
-		n += ft_putunsignbr((unsigned int)args);
-	if (format == 'x')
-		n += ft_puthex_lower((unsigned int)args);
-	if (format == 'X')
-		n += ft_puthex_upper((unsigned int)args);
-	return (n);
+		return (ft_putchar(var_arg(args, int)));
+	else if (format == 's')
+		return (ft_putstr(var_arg(args, char *)));
+	else if (format == 'p')
+		return (ft_putpoint(var_arg(args, unsigned long)));
+	else if (format == 'd' || *format == 'i')
+		return (ft_putnbr(var_arg(args, int)));
+	else if (format == 'u')
+		return (ft_putunsignbr(var_arg(args, unsigned int)));
+	else if (format == 'x')
+		return (ft_putnbr_base(var_arg(args, unsigned int),
+					"0123456789abcdef"));
+	else if (format == 'X')
+		return (ft_putnbr_base(var_arg(args, unsigned int),
+					"0123456789ABCDEF"));
+	else if (format == '%')
+		return (ft_putchar('%'));
+	return (-1);
 }
