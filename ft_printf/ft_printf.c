@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 14:22:25 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 15:42:23 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	check_format(char format, va_list args)
 
 int	ft_printf(char const *format, ...)
 {
-	var_list		args;
+	va_list			args;
 	unsigned int	count;
 
 	count = 0;
