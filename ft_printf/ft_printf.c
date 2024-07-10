@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 14:20:07 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 14:22:25 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ static int	check_format(char format, va_list args)
 		return (ft_putunsignbr(va_arg(args, unsigned int)));
 	else if (format == 'x')
 		return (ft_putnbr_base(va_arg(args, unsigned int),
-					"0123456789abcdef"));
+				"0123456789abcdef"));
 	else if (format == 'X')
 		return (ft_putnbr_base(va_arg(args, unsigned int),
-					"0123456789ABCDEF"));
+				"0123456789ABCDEF"));
 	else if (format == '%')
 		return (ft_putchar('%'));
 	return (-1);
