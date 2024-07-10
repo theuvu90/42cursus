@@ -6,10 +6,11 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 12:18:47 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 12:28:37 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
 int	ft_printf(char const *format, ...)
 {}

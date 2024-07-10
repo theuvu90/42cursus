@@ -6,13 +6,13 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:48:08 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 12:18:09 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/10 12:28:57 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putnbr_base(unsigned long nbr, char *base, int result)
+int	ft_putnbr_base(unsigned long nbr, char *base)
 {
 	unsigned long	len;
 
@@ -23,15 +23,14 @@ int	ft_putnbr_base(unsigned long nbr, char *base, int result)
 	{
 		if (ft_putchar(base[nbr] == -1))
 			return (-1);
-		return (result + 1);
+		return (1);
 	}
 	else
 	{
-		result = ft_putnbr_base(nbr / len, base, result);
-		if (result == -1)
+		if (ft_putnbr_base(nbr / len, base) == -1)
 			return (-1);
 		if (ft_putchar(base[nbr % len]) == -1)
 			return (-1);
-		return (result + 1);
+		return (1);
 	}
 }
