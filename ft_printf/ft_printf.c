@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 22:06:21 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 22:38:31 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,17 +79,20 @@ int	main(){
 	printf("%i\n", 123);
 	ft_printf("%u\n", (unsigned int)4294967295);
 	printf("%u\n", (unsigned int)4294967295);
-	ft_printf("%x\n", 42211);
-	printf("%x\n", 42211);
-	ft_printf("%X\n", 42211);
-	printf("%X\n", 42211);
+	ft_printf("%x\n", 442211);
+	printf("%x\n", 442211);
+	ft_printf("%X\n", 442211);
+	printf("%X\n", 442211);
 	
-	unsigned long nbr = 987654321;
+	int nbr = 987654321;
 	void * ptr = &nbr;
 	ft_printf("%p\n", ptr);
 	printf("%p\n", ptr);
 	
 	ft_printf("%%\n");
 	printf("%%\n");
+
+	ft_printf("Hello %d %s 100%%\n", 42, "Madrid");
+	printf("Hello %d %s 100%%\n", 42, "Madrid");
 	return (0);
 }*/
