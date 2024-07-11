@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 14:17:13 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 15:03:03 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,52 @@ static int	check_format(char format, va_list args)
 	return (-1);
 }
 
+static int	ft_format(const char *format, va_list args, int *i)
+{
+	int	count;
+
+	count = 0;
+	if (*(format + *i) == '%' && *(format + *i + 1))
+	{
+		(*i)++;
+		count = check_format(*(format + *i), args);
+		if (count == -1)
+			return (-1);
+	}
+	else if (*(format + *i) != '%')
+	{
+		count = ft_putchar(*(format + *i));
+		if (count == -1)
+			return (-1);
+	}
+	(*i)++;
+	return (count);
+}
+
 int	ft_printf(char const *format, ...)
 {
-	
+	va_list	args;
+	int		count;
+	int		i;
+	int		result;
+
+	va_start(args, format);
+	count = 0;
+	i = 0;
+	result = 0;
+	if (format)
+	{
+		while (*(format + i))
+		{
+			result = ft_format(format, args, &i);
+			if (result == -1)
+			{
+				va_end(args);
+				return (-1);
+			}
+			count += result;
+		}
+	}
+	va_end(args);
+	return (count);
 }
