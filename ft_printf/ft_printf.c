@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 20:37:09 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 22:06:21 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,9 @@ static int	ft_format(const char *format, va_list args, int *i)
 	{
 		(*i)++;
 		count = check_format(*(format + *i), args);
-		if (count == -1)
-			return (-1);
 	}
 	else if (*(format + *i) != '%')
-	{
 		count = ft_putchar(*(format + *i));
-		if (count == -1)
-			return (-1);
-	}
 	(*i)++;
 	return (count);
 }
@@ -62,25 +56,13 @@ int	ft_printf(char const *format, ...)
 	va_list	args;
 	int		count;
 	int		i;
-	int		result;
 
 	va_start(args, format);
 	count = 0;
 	i = 0;
-	result = 0;
 	if (format)
-	{
 		while (*(format + i))
-		{
-			result = ft_format(format, args, &i);
-			if (result == -1)
-			{
-				va_end(args);
-				return (-1);
-			}
-			count += result;
-		}
-	}
+			count += ft_format(format, args, &i);
 	va_end(args);
 	return (count);
 }
@@ -97,10 +79,10 @@ int	main(){
 	printf("%i\n", 123);
 	ft_printf("%u\n", (unsigned int)4294967295);
 	printf("%u\n", (unsigned int)4294967295);
-	ft_printf("%x\n", 4221);
-	printf("%x\n", 4221);
-	ft_printf("%X\n", 4221);
-	printf("%X\n", 4221);
+	ft_printf("%x\n", 42211);
+	printf("%x\n", 42211);
+	ft_printf("%X\n", 42211);
+	printf("%X\n", 42211);
 	
 	unsigned long nbr = 987654321;
 	void * ptr = &nbr;
