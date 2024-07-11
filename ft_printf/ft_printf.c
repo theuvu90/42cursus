@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 18:36:19 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 20:37:09 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (count);
 }
-
+/*
 #include <stdio.h>
 int	main(){
 	ft_printf("%c\n", 'm');
@@ -95,15 +95,19 @@ int	main(){
 	printf("%d\n", 12345678);
 	ft_printf("%i\n", 123);
 	printf("%i\n", 123);
-	ft_printf("%u\n", 294967295);
-	printf("%u\n", 294967295);
-	ft_printf("%x\n", 12345678);
-	printf("%x\n", 12345678);
-	ft_printf("%X\n", 12345678);
-	printf("%X\n", 12345678);
-	ft_printf("%p\n", "123456789");
-	printf("%p\n", "123456789");
+	ft_printf("%u\n", (unsigned int)4294967295);
+	printf("%u\n", (unsigned int)4294967295);
+	ft_printf("%x\n", 4221);
+	printf("%x\n", 4221);
+	ft_printf("%X\n", 4221);
+	printf("%X\n", 4221);
+	
+	unsigned long nbr = 987654321;
+	void * ptr = &nbr;
+	ft_printf("%p\n", ptr);
+	printf("%p\n", ptr);
+	
 	ft_printf("%%\n");
 	printf("%%\n");
 	return (0);
-}
+}*/
