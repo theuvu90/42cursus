@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunsignbr.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_unsig.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:08:57 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/10 10:24:39 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 14:16:31 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putunsignbr(unsigned int n)
+int	ft_putnbr_unsig(unsigned int n)
 {
 	unsigned int	count;
 
