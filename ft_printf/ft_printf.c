@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 17:46:52 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 18:36:19 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (count);
 }
-/*
+
 #include <stdio.h>
 int	main(){
 	ft_printf("%c\n", 'm');
@@ -97,13 +97,13 @@ int	main(){
 	printf("%i\n", 123);
 	ft_printf("%u\n", 294967295);
 	printf("%u\n", 294967295);
-	ft_printf("%x\n", 6411);
-	printf("%x\n", 6411);
-	ft_printf("%X\n", 6411);
-	printf("%X\n", 6411);
-	ft_printf("%p\n", "Hello");
-	printf("%p\n", "Hello");
-	ft_printf("%%");
-	printf("%%");
+	ft_printf("%x\n", 12345678);
+	printf("%x\n", 12345678);
+	ft_printf("%X\n", 12345678);
+	printf("%X\n", 12345678);
+	ft_printf("%p\n", "123456789");
+	printf("%p\n", "123456789");
+	ft_printf("%%\n");
+	printf("%%\n");
 	return (0);
-}*/
+}
