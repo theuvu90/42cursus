@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:48:08 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 13:06:09 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 14:01:22 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putnbr_hex(unsigned long nbr, char *base)
 	}
 	else
 	{
-		if (ft_putnbr_base(nbr / 16, base) == -1)
+		if (ft_putnbr_hex(nbr / 16, base) == -1)
 			return (-1);
 		if (ft_putchar(base[nbr % 16]) == -1)
 			return (-1);
