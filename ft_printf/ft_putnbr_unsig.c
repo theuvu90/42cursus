@@ -6,15 +6,17 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:08:57 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 18:34:03 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 19:04:25 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
 int	ft_putnbr_unsig(unsigned int n)
-{	
-	if (n > 9)
-		return (ft_putnbr(n / 10) + ft_putnbr(n % 10));
-	return (ft_putchar(n + '0'));
+{
+	return (ft_putnbr(n / 10) + ft_putnbr(n % 10));
 }
+/*
+ft_putnbr para numero tipo int, valor de -2147483648 a 2147483647
+ft_putnbr_unsig para numero tipo unsigned int, valor de 0 a 4294967295
+*/
