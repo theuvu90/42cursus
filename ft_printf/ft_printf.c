@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 17:30:50 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 17:46:52 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,8 @@ int	ft_printf(char const *format, ...)
 /*
 #include <stdio.h>
 int	main(){
+	ft_printf("%c\n", 'm');
+	printf("%c\n", 'm');
 	ft_printf("%s\n", "Hello World");
 	printf("%s\n", "Hello World");
 	ft_printf("%d\n", 12345678);

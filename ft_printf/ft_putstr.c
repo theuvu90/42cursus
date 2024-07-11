@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:07:24 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 12:59:20 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/11 17:46:05 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putstr(char *s)
 
 	i = 0;
 	if (!s)
-		return (write(1, "(nil)", 5));
+		return (write(1, "(null)", 6));
 	while (s[i])
 	{
 		if (ft_putchar(s[i]) == -1)
