@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/12 10:24:34 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 10:46:24 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ int	main(){
 	printf("%c\n", 'm');
 	ft_printf("%s\n", "Hello World");
 	printf("%s\n", "Hello World");
+	ft_printf("%s\n", (char *)NULL);
+	printf("%s\n", (char *)NULL);
 	ft_printf("%d\n", 12345678);
 	printf("%d\n", 12345678);
 	ft_printf("%i\n", 123);
