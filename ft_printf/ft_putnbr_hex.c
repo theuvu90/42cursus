@@ -6,11 +6,11 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 11:48:08 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 20:09:42 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 09:43:33 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_hex(unsigned long nbr, char *base)
 {

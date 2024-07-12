@@ -6,11 +6,11 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:05:54 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 20:12:20 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 09:43:57 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putpoint(unsigned long p)
 {

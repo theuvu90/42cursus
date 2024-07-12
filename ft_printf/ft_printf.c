@@ -6,11 +6,11 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 22:38:31 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 09:43:07 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	check_format(char format, va_list args)
 {

@@ -6,11 +6,11 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:07:24 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/11 22:02:59 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 09:44:05 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {
