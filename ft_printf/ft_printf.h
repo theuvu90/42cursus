@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:09:20 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/12 09:42:56 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 10:07:50 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 # define FT_PRINTF_H
 
 # include <unistd.h>
-# include <stdlib.h>
 # include <stdarg.h>
-# include <stddef.h>
 
 int	ft_putchar(char c);
 int	ft_putstr(char *s);

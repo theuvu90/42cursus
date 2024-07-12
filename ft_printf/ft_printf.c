@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/12 09:43:07 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 10:06:12 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,8 @@ int	main(){
 	void * ptr = &nbr;
 	ft_printf("%p\n", ptr);
 	printf("%p\n", ptr);
+	ft_printf("%p\n", NULL);
+	printf("%p\n", NULL);
 	
 	ft_printf("%%\n");
 	printf("%%\n");

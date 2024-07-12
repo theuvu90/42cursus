@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:05:54 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/12 09:43:57 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/12 09:50:18 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_putpoint(unsigned long p)
 {
+	if (!p)
+		return (write(1, "(nil)", 5));
 	return (write(1, "0x", 2) + ft_putnbr_hex(p, "0123456789abcdef"));
 }
