@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:35:16 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/13 09:18:16 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/13 19:17:24 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ int	ft_putnbr(int n)
 
 int	ft_putnbr_unsig(unsigned int n)
 {
-	return (ft_putnbr(n / 10) + ft_putnbr(n % 10));
+	if (n > 9)
+		return (ft_putnbr(n / 10) + ft_putnbr(n % 10));
+	return (ft_putchar(n + '0'));
 }
 /*
 ft_putnbr para numero tipo int, valor de -2147483648 a 2147483647
