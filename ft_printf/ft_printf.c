@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/13 09:29:07 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/13 09:32:17 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	ft_printf(char const *format, ...)
 	va_end(args);
 	return (count);
 }
-
+/*
 #include <stdio.h>
 int	main(){
 	ft_printf("%c\n", 'm');
@@ -99,4 +99,4 @@ int	main(){
 	ft_printf("Hello %d %s 100%%\n", 42, "Madrid");
 	printf("Hello %d %s 100%%\n", 42, "Madrid");
 	return (0);
-}
+}*/
