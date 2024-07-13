@@ -2,8 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror	
 NAME = libftprintf.a 
 
-SOURCES	=	ft_putchar.c ft_putstr.c ft_putnbr.c ft_putnbr_unsig.c \
-		ft_putnbr_hex.c ft_putpoint.c ft_format.c ft_printf.c 		
+SOURCES	=	ft_printf_utils_1.c ft_printf_utils_2.c ft_printf.c				
 
 OBJ =	$(SOURCES:.c=.o)
 

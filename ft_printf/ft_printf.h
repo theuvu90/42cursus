@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:09:20 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/12 11:39:20 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/13 09:13:16 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_putnbr(int n);
 int	ft_putnbr_unsig(unsigned int n);
 int	ft_putnbr_hex(unsigned long nbr, char *base);
 int	ft_putpoint(unsigned long p);
-int	ft_format(const char *format, va_list args, int *i);
 int	ft_printf(char const *format, ...);
 
 #endif
