@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/13 19:42:04 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/15 10:11:33 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,30 +73,38 @@ int	main(){
 	printf("%c\n", 'm');
 	ft_printf("%s\n", "Hello World");
 	printf("%s\n", "Hello World");
-	ft_printf("%s\n", (char *)NULL);
-	printf("%s\n", (char *)NULL);
-	ft_printf("%d\n", (int)-2147483648);
-	printf("%d\n", (int)-2147483648);
+	
+	char *str = NULL;
+	ft_printf("%s\n", str);
+	printf("%s\n", str);
+	
+	int n = -2147483648;
+	ft_printf("%d\n", n);
+	printf("%d\n", n);
 	ft_printf("%i\n", 0);
 	printf("%i\n", 0);
-	ft_printf("%u\n", (unsigned int)4294967295);
-	printf("%u\n", (unsigned int)4294967295);
+	
+	unsigned int num = 4294967295;
+	ft_printf("%u\n", num);
+	printf("%u\n", num);
 	ft_printf("%u\n", 0);
 	printf("%u\n", 0);
-	ft_printf("%x\n", 442211);
-	printf("%x\n", 442211);
-	ft_printf("%X\n", 442211);
-	printf("%X\n", 442211);
 	
-	int nbr = 987654321;
-	void * ptr = &nbr;
+	unsigned int nbr = 442211;
+	ft_printf("%x\n", nbr );
+	printf("%x\n", nbr);
+	ft_printf("%X\n", nbr);
+	printf("%X\n", nbr);
+	
+	int nbr2 = 987654321;
+	void * ptr = &nbr2;
 	ft_printf("%p\n", ptr);
 	printf("%p\n", ptr);
 	ft_printf("%p\n", NULL);
 	printf("%p\n", NULL);
 	
-	ft_printf("%%\n");
-	printf("%%\n");
+	ft_printf("100%%\n");
+	printf("100%%\n");
 
 	ft_printf("Hello %u %s 100%%\n", 42, "Madrid");
 	printf("Hello %u %s 100%%\n", 42, "Madrid");
