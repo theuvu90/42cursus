@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/15 10:11:33 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/15 12:53:10 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,30 +71,42 @@ int	ft_printf(char const *format, ...)
 int	main(){
 	ft_printf("%c\n", 'm');
 	printf("%c\n", 'm');
-	ft_printf("%s\n", "Hello World");
-	printf("%s\n", "Hello World");
+	// ft_printf("%s\n", "Hello World");
+	// printf("%s\n", "Hello World");
+	printf("n count for original: %d\n", printf("%s\n", "Hello World"));
+	printf("n count for mine: %d\n", ft_printf("%s\n", "Hello World"));
 	
 	char *str = NULL;
 	ft_printf("%s\n", str);
 	printf("%s\n", str);
+	printf("n count for original: %d\n", printf("%s\n", str));
+	printf("n count for mine: %d\n", ft_printf("%s\n", str));
 	
 	int n = -2147483648;
 	ft_printf("%d\n", n);
 	printf("%d\n", n);
 	ft_printf("%i\n", 0);
 	printf("%i\n", 0);
+	printf("n count for original: %d\n", printf("%d\n", n));
+	printf("n count for mine: %d\n", ft_printf("%d\n", n));
 	
 	unsigned int num = 4294967295;
 	ft_printf("%u\n", num);
 	printf("%u\n", num);
 	ft_printf("%u\n", 0);
 	printf("%u\n", 0);
+	printf("n count for original: %d\n", printf("%u\n", num));
+	printf("n count for mine: %d\n", ft_printf("%u\n", num));
 	
 	unsigned int nbr = 442211;
 	ft_printf("%x\n", nbr );
 	printf("%x\n", nbr);
 	ft_printf("%X\n", nbr);
 	printf("%X\n", nbr);
+	printf("n count for original: %d\n", printf("%x\n", nbr));
+	printf("n count for mine: %d\n", ft_printf("%x\n", nbr));
+	printf("n count for original: %d\n", printf("%X\n", nbr));
+	printf("n count for mine: %d\n", ft_printf("%X\n", nbr));
 	
 	int nbr2 = 987654321;
 	void * ptr = &nbr2;
@@ -102,11 +114,15 @@ int	main(){
 	printf("%p\n", ptr);
 	ft_printf("%p\n", NULL);
 	printf("%p\n", NULL);
+	printf("n count for original: %d\n", printf("%p\n", ptr));
+	printf("n count for mine: %d\n", ft_printf("%p\n", ptr));
 	
 	ft_printf("100%%\n");
 	printf("100%%\n");
 
 	ft_printf("Hello %u %s 100%%\n", 42, "Madrid");
 	printf("Hello %u %s 100%%\n", 42, "Madrid");
+	printf("n count for original: %d\n", printf("Hello %u %s 100%%\n", 42, "Madrid"));
+	printf("n count for mine: %d\n", ft_printf("Hello %u %s 100%%\n", 42, "Madrid"));
 	return (0);
 }*/
