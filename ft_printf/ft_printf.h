@@ -6,13 +6,14 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:09:20 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/13 09:13:16 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/15 15:23:06 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
+# define HEX_UPPER "0123456789ABCDEF"
+# define HEX_LOWER "0123456789abcdef"
 # include <unistd.h>
 # include <stdarg.h>
 

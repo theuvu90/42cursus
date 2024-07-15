@@ -6,7 +6,7 @@
 /*   By: thivu <thivu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 10:06:36 by thivu             #+#    #+#             */
-/*   Updated: 2024/07/15 12:53:10 by thivu            ###   ########.fr       */
+/*   Updated: 2024/07/15 15:28:48 by thivu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ static int	check_format(char format, va_list args)
 	else if (format == 'u')
 		return (ft_putnbr_unsig(va_arg(args, unsigned int)));
 	else if (format == 'x')
-		return (ft_putnbr_hex(va_arg(args, unsigned int),
-				"0123456789abcdef"));
+		return (ft_putnbr_hex(va_arg(args, unsigned int), HEX_LOWER));
 	else if (format == 'X')
-		return (ft_putnbr_hex(va_arg(args, unsigned int),
-				"0123456789ABCDEF"));
+		return (ft_putnbr_hex(va_arg(args, unsigned int), HEX_UPPER));
 	else if (format == '%')
 		return (ft_putchar('%'));
 	return (-1);
@@ -121,8 +119,6 @@ int	main(){
 	printf("100%%\n");
 
 	ft_printf("Hello %u %s 100%%\n", 42, "Madrid");
-	printf("Hello %u %s 100%%\n", 42, "Madrid");
-	printf("n count for original: %d\n", printf("Hello %u %s 100%%\n", 42, "Madrid"));
-	printf("n count for mine: %d\n", ft_printf("Hello %u %s 100%%\n", 42, "Madrid"));
+	printf("Hello %u %s 100%%\n", 42, "Madrid");	
 	return (0);
 }*/
